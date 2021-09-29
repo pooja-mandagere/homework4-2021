@@ -60,14 +60,31 @@ a{
   color: #B21F50;
   text-decoration-line: underline;
   text-decoration-style: wavy;
+}
+
+table{
+  border: 5px solid #000000;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 50px;
+  /* 50px radius rounded exterior corners  */
+}
 
 /*Req 5*/
 /*Add selector and rule here*/
-/* :focus{ or tr:hover
+ /* or tr:hover */
+*:focus{
   border-style: dashed;
   border-width: 3 px;
   border-color: #417243;
+}
+
+/* thead, tbody, tfoot{
+
+
 } */
+
+
 
 
 td{
@@ -76,27 +93,43 @@ td{
   text-align: center;
   border-top: 2px solid #000000;
   padding: 10px;
-
 }
 
+/* th{
+  
+} */
 
 .colhead{
   color: #FFFFFF;
-
+  min-width: 125px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #7e0825;
 }
+
+/* th.colhead{
+  width: 125px;
+} */
 
 .rowhead{
+ border-top: 2px solid black;
+ border-right: 2px solid black;
+}
 
+/* tr:nth-child(odd) {
+   opacity: 0.0;
+} */
+
+tr:nth-child(even) {
+  background-color: #D1D1D1;
+}
+
+tr:hover{
+  background-color: rgba(126,8,37,0.5);
 }
 
 
-table{
-  border: 5px solid #000000;
-  margin-left:auto;
-  margin-right:auto;
-  /* border-radius: 50px; */
-  /* 50px radius rounded exterior corners  */
-}
 
 /* table.center {
   margin-left:auto;
@@ -105,7 +138,21 @@ table{
 
 /* I gave you the selector, but not the property-value pair. 
 You can use Inspect Element or your editor to find selectors. */
-thead tr:first-child th:first-child{}
+thead tr:first-child th:first-child{
+  border-top-left-radius: 50px;
+}
+
+thead tr:last-child th:last-child{
+  border-top-right-radius: 50px;
+}
+
+tbody tr:last-child td:last-child{
+  border-bottom-right-radius: 50px;
+}
+
+tbody tr:last-child th.rowhead:first-child{
+  border-bottom-left-radius: 50px;
+}
 
 /*Add selectors and rules here*/
 .image {
@@ -120,5 +167,12 @@ footer{
   background:#000000;
   text-align:center;
   color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  /* position: static; */
+  /* left: 0px;
+  right: 0px; */
   min-height: 75px;
+  /* QUESTION: HOW TO MAKE IT FULL WIDTH */
 }
