@@ -75,7 +75,7 @@ table{
  /* or tr:hover */
 *:focus{
   border-style: dashed;
-  border-width: 3 px;
+  border-width: 3px;
   border-color: #417243;
 }
 
